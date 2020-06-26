@@ -47,7 +47,6 @@ class Game {
       104,
       104,
       10,
-      100
     );
 
     const troll = new Inimigo(
@@ -60,7 +59,6 @@ class Game {
       400,
       400,
       15,
-      100
     );
 
     const inimigoVoador = new Inimigo(
@@ -73,7 +71,6 @@ class Game {
       200,
       150,
       10,
-      100
     );
 
     inimigos.push(inimigo);
@@ -115,8 +112,10 @@ class Game {
     inimigo.render();
     inimigo.move();
 
+
     if (inimigoVisivel) {
       this.index++;
+      inimigo.appear();
       if (this.index > this.map.length - 1) {
         this.index = 0;
       }
