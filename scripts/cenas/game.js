@@ -1,30 +1,13 @@
 class Game {
   constructor() {
     this.index = 0;
-    this.map = [
-      {
-        inimigo: 0,
-        velocidade: 10,
-      },
-      {
-        inimigo: 1,
-        velocidade: 30,
-      },
-      {
-        inimigo: 1,
-        velocidade: 15,
-      },
-      {
-        inimigo: 2,
-        velocidade: 40,
-      },
-    ];
+    this.map = fita.map
   }
 
   setup() {
     cenario = new Cenario(imagemCenario, 5);
     pontuacao = new Pontuacao();
-    vida = new Vida(3, 3);
+    vida = new Vida(fita.config.vidaMaxima, fita.config.vidaInicial);
 
     personagem = new Personagem(
       matrixPersonagem,

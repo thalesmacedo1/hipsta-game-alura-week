@@ -9,6 +9,7 @@ let imagemVida;
 let fonteTelaInicial;
 let jumpSound;
 let game;
+let fita;
 
 let cenaAtual = 'game';
 let cenas;
